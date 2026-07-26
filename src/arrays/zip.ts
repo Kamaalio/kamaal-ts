@@ -23,6 +23,16 @@ function zipUnequalled<TargetElement1, TargetElement2>(
 export function zip<TargetElement1, TargetElement2>(
   array1: TargetElement1[],
   array2: TargetElement2[],
+  equalize: true
+): Array<[TargetElement1, TargetElement2]>;
+export function zip<TargetElement1, TargetElement2>(
+  array1: TargetElement1[],
+  array2: TargetElement2[],
+  equalize?: boolean
+): Array<[TargetElement1 | undefined, TargetElement2 | undefined]>;
+export function zip<TargetElement1, TargetElement2>(
+  array1: TargetElement1[],
+  array2: TargetElement2[],
   equalize?: boolean
 ): Array<[TargetElement1 | undefined, TargetElement2 | undefined]> {
   if (equalize === true) {
