@@ -1,0 +1,19 @@
+src/arrays/zip.ts
+  s_ed36e708495745::t_ba3fc09e15a098 23-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "cc9a3e12e2a75492a0a2487a4872f1047b63a3a9",
+  "prompts": {},
+  "sessions": {
+    "s_ed36e708495745": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a8fb1c30-c66b-4fb9-be97-cf762066f0c5",
+        "model": "unknown"
+      },
+      "human_author": "Kamaal Farah <kamaal.f1@gmail.com>"
+    }
+  }
+}
