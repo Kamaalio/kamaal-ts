@@ -1,0 +1,19 @@
+scripts/publish.sh
+  s_e9a65502328fce::t_2394e10c6f49df 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "152ab0f14e3eaf9b55938bd92b95e571d6d4af0b",
+  "prompts": {},
+  "sessions": {
+    "s_e9a65502328fce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4b3fbdd3-e3a8-4c67-8437-5b11431cecae",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}
