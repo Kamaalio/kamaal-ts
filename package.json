@@ -1,6 +1,10 @@
 {
   "version": "0.7.2",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kamaalio/kamaal-ts"
+  },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
