@@ -1,0 +1,19 @@
+package.json
+  s_e9a65502328fce::t_be1bf35cc349e6 4-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "61a2e496229af2ef4d2ccf0dd83dd159706bc276",
+  "prompts": {},
+  "sessions": {
+    "s_e9a65502328fce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4b3fbdd3-e3a8-4c67-8437-5b11431cecae",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}
