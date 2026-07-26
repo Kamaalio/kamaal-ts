@@ -3,6 +3,9 @@ name: CI
 on:
   push:
 
+env:
+  PNPM_VERSION: 11.17.0
+
 concurrency:
   group: ${{ github.ref }}-ci
   cancel-in-progress: true
@@ -14,18 +17,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git - Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Use Node 22.x
-        uses: actions/setup-node@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v5
         with:
-          node-version: 22.x
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
           registry-url: https://registry.npmjs.org
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.13.1
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
 
       - name: Install modules
         run: pnpm i
@@ -39,18 +45,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git - Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Use Node 22.x
-        uses: actions/setup-node@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v5
         with:
-          node-version: 22.x
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
           registry-url: https://registry.npmjs.org
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.13.1
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
 
       - name: Install modules
         run: pnpm i
