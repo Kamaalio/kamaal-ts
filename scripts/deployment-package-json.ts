@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import { performance } from 'node:perf_hooks';
 
-import packageJSON from '../package.json';
+import packageJSON from '../package.json' with { type: 'json' };
 
 async function main() {
   const startTime = performance.now();
