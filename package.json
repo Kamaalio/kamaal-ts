@@ -18,27 +18,25 @@
     "bootstrap:ci": "sh scripts/bootstrap-ci.sh",
     "build": "tsc",
     "test": "vitest run",
-    "lint": "prettier --check . && eslint src/index.ts src/**/*.ts",
+    "lint": "pnpm format:check && oxlint src/",
     "prepare": "husky",
-    "format": "prettier --write .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "release": "sh scripts/publish.sh",
-    "type-check": "tsc --noEmit",
-    "quality": "pnpm lint && pnpm type-check"
+    "typecheck": "tsc --noEmit",
+    "quality": "pnpm lint && pnpm typecheck"
   },
   "name": "@kamaalio/kamaal",
   "author": "Kamaal Farah",
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
     "@types/node": "^26.1.1",
-    "eslint": "^10.8.0",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.2.0",
-    "prettier": "^3.9.6",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "tsx": "^4.23.1",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.10"
   },
   "resolutions": {},
@@ -50,6 +48,7 @@
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx,mjs,cjs}": "pnpm lint",
+    "*": "oxfmt --no-error-on-unmatched-pattern"
   }
 }
