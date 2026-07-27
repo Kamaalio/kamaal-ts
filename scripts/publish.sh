@@ -1,3 +1,5 @@
+set -e
+
 if [ -z "$VERSION" ]; then
   echo "❌ Error: VERSION environment variable is not set"
   echo "Usage: VERSION=x.x.x ./scripts/publish.sh"
