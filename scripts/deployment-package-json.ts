@@ -24,4 +24,4 @@ function modifyPackageJSON() {
   return { ...packageJSON, version };
 }
 
-main();
+await main();

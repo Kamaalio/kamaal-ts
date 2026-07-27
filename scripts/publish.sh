@@ -9,5 +9,5 @@ echo "🐸 $VERSION"
 pnpm i
 rm -rf dist
 pnpm build
-pnpm exec tsx scripts/deployment-package-json.ts "${VERSION:-null}"
+node scripts/deployment-package-json.ts "${VERSION:-null}"
 pnpm publish --access public --no-git-checks
