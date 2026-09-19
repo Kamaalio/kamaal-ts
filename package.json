@@ -15,14 +15,14 @@
     "node": ">=21"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "test": "vitest run",
     "lint": "pnpm format:check && oxlint src/",
     "prepare": "husky",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "release": "sh scripts/publish.sh",
-    "typecheck": "tsc --noEmit && tsc --project tsconfig.tests.json",
+    "typecheck": "tsc --noEmit",
     "quality": "pnpm lint && pnpm typecheck"
   },
   "name": "@kamaalio/kamaal",
