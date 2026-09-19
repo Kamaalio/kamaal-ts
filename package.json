@@ -22,7 +22,7 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "release": "sh scripts/publish.sh",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --project tsconfig.tests.json",
     "quality": "pnpm lint && pnpm typecheck"
   },
   "name": "@kamaalio/kamaal",
