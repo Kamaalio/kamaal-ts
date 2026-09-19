@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  PNPM_VERSION: 11.17.0
+  PNPM_VERSION: 12.4.1
 
 concurrency:
   group: ${{ github.ref }}-ci
