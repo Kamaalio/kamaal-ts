@@ -8,6 +8,37 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./arrays": {
+      "types": "./dist/arrays/index.d.ts",
+      "default": "./dist/arrays/index.js"
+    },
+    "./maths": {
+      "types": "./dist/maths/index.d.ts",
+      "default": "./dist/maths/index.js"
+    },
+    "./objects": {
+      "types": "./dist/objects/index.d.ts",
+      "default": "./dist/objects/index.js"
+    },
+    "./strings": {
+      "types": "./dist/strings/index.d.ts",
+      "default": "./dist/strings/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/types/index.js"
+    },
+    "./asserts": {
+      "types": "./dist/asserts.d.ts",
+      "default": "./dist/asserts.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist"
   ],

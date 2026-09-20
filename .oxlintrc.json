@@ -12,6 +12,18 @@
   },
   "ignorePatterns": ["dist/**/*"],
   "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "vitest",
+            "importNames": ["describe", "expect", "it"],
+            "message": "vitest globals are enabled — use the ambient describe/expect/it instead of importing them."
+          }
+        ]
+      }
+    ],
     "no-array-constructor": "error",
     "typescript/no-deprecated": "error",
     "typescript/consistent-type-imports": "error",
