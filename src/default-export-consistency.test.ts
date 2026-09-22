@@ -15,6 +15,7 @@ const sourceFiles = (
       return compactMap(files, (file) => {
         if (!file.endsWith('.ts')) return null;
         if (file.endsWith('.test.ts')) return null;
+        if (file.endsWith('.test-d.ts')) return null;
         if (file === 'index.ts') return null;
         return `./${dir}/${file}`;
       });
