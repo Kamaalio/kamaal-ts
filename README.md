@@ -78,13 +78,14 @@ Available from `@kamaalio/kamaal/maths` or `maths` at the package root.
 
 Available from `@kamaalio/kamaal/objects` or `objects` at the package root.
 
-| Function                       | Description                                                            |
-| ------------------------------ | ---------------------------------------------------------------------- |
-| `omit(object, keyOrKeys)`      | Returns an object without the specified key or keys.                   |
-| `omitBy(object, predicate)`    | Returns an object without values for which `predicate` returns `true`. |
-| `flatten(object)`              | Flattens nested object keys with `.` separators; arrays remain values. |
-| `unflatten(object, delimiter)` | Builds a nested object from delimited keys.                            |
-| `toEntries(object)`            | A typed counterpart to `Object.entries`.                               |
+| Function                       | Description                                                                                            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `omit(object, keyOrKeys)`      | Returns an object without the specified key or keys.                                                   |
+| `omitBy(object, predicate)`    | Returns an object without values for which `predicate` returns `true`.                                 |
+| `flatten(object)`              | Flattens nested object keys with `.` separators; arrays remain values.                                 |
+| `unflatten(object, delimiter)` | Builds a nested object from delimited keys.                                                            |
+| `toEntries(object)`            | A typed counterpart to `Object.entries`.                                                               |
+| `recordGet(record, key)`       | Type-safe access to a record's value for a key, returning `undefined` for keys not present at runtime. |
 
 ```ts
 const result = objects.unflatten(
